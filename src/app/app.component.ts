@@ -7,11 +7,6 @@ import { UsersService } from './users.service';
 })
 export class AppComponent {
   title = 'GitHub_search';
-  constructor(private user: UsersService){
-    this.user.getData().subscribe(data => {
-      console.log(data)
-    })
-  }
 }
  
 // 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;

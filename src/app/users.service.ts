@@ -1,15 +1,61 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from './user-class/user';
+import { environment } from 'src/environments/environment';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersService {
+  user!: User;
 
-  constructor(private http: HttpClient) { }
+  private username!: string;
+  // private clientsecret = 'cd0d795072a494790345859fb21d06ad94ecafee';
+  // private clientid = '641ddc278c83b0cf2ca2';
 
-  getData(){
-    let apiKey = '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;';
-    let apiUrl = `https://api.github.com/users/daneden?access_token= ${apiKey} `;
-    return this.http.get(apiUrl)
+  constructor(private http: HttpClient) {
+    this.user = new User('', '', '', '', '', '', '', '');
   }
-}
+  getProfile(username: string) {
+    interface ApiResponse {
+      name: any;
+      login: any;
+      avatar: any;
+      link: any;
+      bio: any;
+      folowers: any;
+      following: any;
+      data: any;
+    }
+    let userUrl=`https://api.github.com/users/${username}?${environment.apiKey}`
+      let promise = new Promise<void>((resolve,reject) =>{
+      this.http.get<ApiResponse>(userUrl).toPromise().then
+      (response => {
+        this.user.name = response?.name;
+        this.user.login = response?.login;
+
+        resolve()
+      },
+      error=>{
+        this.user.name = "We couldn’t find any users matching the name given"
+
+        reject(error)
+        })
+      })
+      return promise;
+    }
+  }
+
+  
+
+//   getData() {
+      
+//     return this.http.get('https://api.github.com/users/' +
+//       this.username +
+//       '?client_id=' +
+//       this.clientid+'$client_secret='+this.clientsecret);
+//   }
+// }
+
+
+
+// cd0d795072a494790345859fb21d06ad94ecafee;
