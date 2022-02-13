@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user-class/user';
 import { environment } from 'src/environments/environment';
+import { Repos } from './repos';
 @Injectable({
   providedIn: 'root',
 })
 export class UsersService {
   user!: User;
+  repos!:Repos;
 
   private username!: string;
   // private clientsecret = 'cd0d795072a494790345859fb21d06ad94ecafee';
@@ -14,6 +16,7 @@ export class UsersService {
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', '', '', '', '');
+    this.repos= new Repos('', '', '', '',new Date()); 
   }
   getProfile(username: string) {
     interface ApiResponse {
