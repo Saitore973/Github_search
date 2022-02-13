@@ -9,8 +9,10 @@ import {UsersService } from './users.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeropageComponent } from './heropage/heropage.component';
 import { DateCountPipe } from './date-count.pipe';
+import { SearchComponent } from './search/search.component';
+import { HighlightDirective } from './highlight.directive';
 @NgModule({
-  declarations: [AppComponent, ProfileComponent, NavbarComponent, HeropageComponent, DateCountPipe],
+  declarations: [AppComponent, ProfileComponent, NavbarComponent, HeropageComponent, DateCountPipe, SearchComponent, HighlightDirective],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [UsersService],
   bootstrap: [AppComponent],

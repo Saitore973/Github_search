@@ -10,10 +10,16 @@ import { Repos } from '../repos';
 export class HeropageComponent implements OnInit {
   user!: User;
   repos:Repos[];
+  username:string;
   constructor(private UsersService: UsersService) {}
   searchUser(username: string){
-   return this.UsersService.getProfile(username)
+   return this.UsersService.updateProfile(username)
   }
+
+  
+  // findProfile(){
+  //   this.UsersService.getProfile(this.username);
+  // }
   // searchUser(username: string) {
   //   this.UsersService.getProfile(username).then(
   //     (success) => {
