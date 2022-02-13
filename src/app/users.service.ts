@@ -19,10 +19,10 @@ export class UsersService {
     interface ApiResponse {
       name: any;
       login: any;
-      avatar: any;
+      avatar_url:any;
       link: any;
       bio: any;
-      folowers: any;
+      followers: any;
       following: any;
       data: any;
     }
@@ -32,6 +32,12 @@ export class UsersService {
       (response => {
         this.user.name = response?.name;
         this.user.login = response?.login;
+        this.user.avatar = response?.avatar_url;
+        this.user.link = response?.link;
+        this.user.bio = response?.bio;
+        this.user.followers =response?.followers;
+        this.user.following= response?.following;
+        this.user.data= response?.data;
 
         resolve()
       },

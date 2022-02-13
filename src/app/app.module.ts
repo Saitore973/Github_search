@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
-import {UsersService } from './users.service'
+import {UsersService } from './users.service';
+import { NavbarComponent } from './navbar/navbar.component'
 @NgModule({
-  declarations: [AppComponent, ProfileComponent],
+  declarations: [AppComponent, ProfileComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [UsersService],
   bootstrap: [AppComponent],
