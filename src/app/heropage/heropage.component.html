@@ -24,7 +24,7 @@
         <div class="col-md-2">
           Followers {{user.followers}}
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" >
           Following {{user.following}}
         </div>
       </div>
@@ -32,6 +32,9 @@
     <div class="col">
       <div>
         <h1>Github Repositories</h1>
+        <p>
+          Available Repositories: <span appHighlight>{{user.public_repos}}</span> 
+        </p>
         <ul *ngFor="let repo of repos">
           <div class="col">
             <div class="row">
