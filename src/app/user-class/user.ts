@@ -8,6 +8,6 @@ export class User {
     public bio: any,
     public followers: any,
     public following: any,
-    public data: any
+    public public_repos: any
   ) {}
 }
