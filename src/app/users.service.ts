@@ -63,7 +63,7 @@ export class UsersService {
       html_url: string;
       description: string;
       language: string;
-      
+      created_at:Date;
     }
 
     let repoUrl = `https://api.github.com/users/${username}/repos?${environment.apiKey}`;
@@ -74,11 +74,12 @@ export class UsersService {
         .then(
           (response) => {
             for(let i=0;i<this.user.public_repos;i++){
-              let repo = new Repos('', '', '', '');
+              let repo = new Repos('', '', '', '',new Date());
               repo.name= response[i]["name"];
               repo.html_url= response[i]["html_url"];
               repo.description= response[i]["description"];
               repo.language= response[i]["language"];
+              repo.created_at= response[i]["created_at"];
               this.repos.push(repo);
             }
             // this.repos.name = response?.name;
@@ -97,13 +98,7 @@ export class UsersService {
 }
 
 // `https://api.github.com/users/Saitore973/repos?'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'`;
-//   getRepositories(username: string) {
-//     interface ApiResponse {
-//       name: any;
-//       html_url: any;
-//       description: any;
-//       language: any;
-//       created_at: Date;
+//   
 //     }
     // let repoUrl = `https://api.github.com/users/${username}/repos?${environment.apiKey}`;
 //     let promise =new Promise<void>((resolve,reject) => {
