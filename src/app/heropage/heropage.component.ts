@@ -9,13 +9,23 @@ import { Repos } from '../repos';
 })
 export class HeropageComponent implements OnInit {
   user!: User;
-  repos: Repos[];
+  repos!: any;
   // username:string;
   constructor(private UsersService: UsersService) {}
   searchUser(username: string) {
     this.UsersService.getProfile(username).then(
       (success) => {
         this.user = this.UsersService.user;
+        console.log();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
+    this.UsersService.getRepo(username).then(
+      (success) => {
+        this.repos = this.UsersService;
         console.log();
       },
       (error) => {

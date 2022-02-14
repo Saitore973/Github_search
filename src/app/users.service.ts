@@ -8,7 +8,7 @@ import { Repos } from './repos';
 })
 export class UsersService {
   user!: User;
-  repos: Repos[]=[];
+  repos!: Repos;
 
   private username!: string;
   // private clientsecret = 'cd0d795072a494790345859fb21d06ad94ecafee';
@@ -76,15 +76,16 @@ export class UsersService {
         .toPromise()
         .then(
           (response) => {
-            for(let i=0;i<this.user.public_repos;i++){
-              let repo = new Repos('', '', '', '',new Date());
-              repo.name= response[i]["name"];
-              repo.html_url= response[i]["html_url"];
-              repo.description= response[i]["description"];
-              repo.language= response[i]["language"];
-              repo.created_at= response[i]["created_at"];
-              this.repos.push(repo);
-            }
+            this.repos=response
+            // for(let i=0;i<this.user.public_repos;i++){
+            //   let repo = new Repos('', '', '', '',new Date());
+            //   repo.name= response[i]["name"];
+            //   repo.html_url= response[i]["html_url"];
+            //   repo.description= response[i]["description"];
+            //   repo.language= response[i]["language"];
+            //   repo.created_at= response[i]["created_at"];
+            //   this.repos.push(repo);
+            // }
             // this.repos.name = response?.name;
             // this.repos.html_url = response?.html_url;
             // console.log(this.repos);
