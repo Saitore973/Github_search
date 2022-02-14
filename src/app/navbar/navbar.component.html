@@ -9,6 +9,43 @@
 </div>
 </div>
 <hr>
+<div class="container">
+  <h2>
+    Curious about the Github status of anyone? <br> Check it out here! <br> <br>
+  </h2>
 
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <app-search (searchResult)="searchUser($event)"></app-search>
+     
+    </div> <br> <br>
+    <div class="col-md-3"></div>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <img [src]="user.avatar" alt="">
+      <div class="row">
+        <div class="col-md-2">
+          Repositories {{user.public_repos}}
+        </div>
+        <div class="col-md-2">
+          Followers {{user.followers}}
+        </div>
+        <div class="col-md-2" >
+          Following {{user.following}}
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" routerLink="goals" routerLinkActive='active'>Goals<span class="sr-only">(current)</span></a>
+      About
+    </div>
+  </div> -->
+<a class="nav-item nav-link" routerLink="/about" routerLinkActive='active'> <button>Get started</button></a>
 
 
