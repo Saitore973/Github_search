@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
 
   constructor() {}
 
-  searchUser() {
+  searchUser(userQuery: string) {
     this.searchResult.emit(this.userQuery);
   }
   ngOnInit(): void {}

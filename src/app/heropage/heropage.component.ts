@@ -9,35 +9,32 @@ import { Repos } from '../repos';
 })
 export class HeropageComponent implements OnInit {
   user!: User;
-  repos:Repos[];
-  username:string;
+  repos: Repos[];
+  // username:string;
   constructor(private UsersService: UsersService) {}
-  searchUser(username: string){
-   return this.UsersService.updateProfile(username)
+  searchUser(username: string) {
+    this.UsersService.getProfile(username).then(
+      (success) => {
+        this.user = this.UsersService.user;
+        console.log();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+    
   }
 
-  
   // findProfile(){
   //   this.UsersService.getProfile(this.username);
-  // }
-  // searchUser(username: string) {
-  //   this.UsersService.getProfile(username).then(
-  //     (success) => {
-  //       this.user = this.UsersService.user;
-  //       console.log();
-  //     },
-  //     (error) => {
-  //       console.log(error);
-  //     }
-  //   );
   // }
 
   ngOnInit(): void {
     this.searchUser('Saitore973');
-    this.user= this.UsersService.user;
+    this.user = this.UsersService.user;
     this.UsersService.getRepo('Saitore973');
-    // this.UsersService.getProfile('Saitore973');
-    this.repos=this.UsersService.repos;
+    this.UsersService.getProfile('Saitore973');
+    this.repos = this.UsersService.repos;
   }
 }
 

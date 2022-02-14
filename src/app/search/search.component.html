@@ -1,12 +1,7 @@
-<!-- <section id="hero">
-    <div class="container bg-dark" id="navy">
-        <div class="searchbox">
+
+             <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search"[(ngModel)]="userQuery" name="userQuery"/>
+        <button class="btn btn-primary" (click)="searchUser(userQuery)" type="button">Search</button>
+      </form>
           
-            <div class="searchBar">
-                <input  class= "mt-3" id="searchQueryInput" type="text"  placeholder="Enter github username" [(ngModel)]="userQuery" name="userQuery"/>
-                 <button type="button" class="btn bg-white" (click)="searchUser()"> search </button>
-            </div>
-          
-        </div>
-    </div>
-  </section> -->
+        

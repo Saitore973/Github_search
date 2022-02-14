@@ -18,9 +18,9 @@ export class UsersService {
     this.user = new User('', '', '', '', '', '', '', '');
     // this.repos = new Repos('', '', '', '', new Date());
   }
-  updateProfile(username:string){
-    this.username=username;
-  }
+  // updateProfile(username:string){
+  //   this.username=username;
+  // }
   getProfile(username: string) {
     interface ApiResponse {
       name: any;
