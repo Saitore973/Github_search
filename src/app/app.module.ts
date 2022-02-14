@@ -12,8 +12,9 @@ import { DateCountPipe } from './date-count.pipe';
 import { SearchComponent } from './search/search.component';
 import { HighlightDirective } from './highlight.directive';
 import { NanavigationComponent } from './nanavigation/nanavigation.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
-  declarations: [AppComponent, ProfileComponent, NavbarComponent, HeropageComponent, DateCountPipe, SearchComponent, HighlightDirective, NanavigationComponent],
+  declarations: [AppComponent, ProfileComponent, NavbarComponent, HeropageComponent, DateCountPipe, SearchComponent, HighlightDirective, NanavigationComponent, NotFoundComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [UsersService],
   bootstrap: [AppComponent],
