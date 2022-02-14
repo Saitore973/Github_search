@@ -13,3 +13,19 @@ h2{
 img{
     border-radius: 50%;
 }
+.repos{
+    background-color:aquamarine;
+}
+.card{
+     background-color:aquamarine;
+}
+button{
+    margin-top:30px;
+    margin-left: 100px;
+    background-color:aquamarine;
+    border-radius:20px;
+    border:none;
+}
+.hero{
+    background-color:rgb(184, 183, 183);
+}

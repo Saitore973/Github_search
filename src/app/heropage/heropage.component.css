@@ -1,4 +1,11 @@
+.kar{
+    text-align: center;
+    margin-right: 400px;
+    border-bottom: 1px solid aquamarine;
+}
 
-.card{
+.kard{
+    background-color: rgb(184, 183, 183);
     display: flex;
+    color: aquamarine;
 }
