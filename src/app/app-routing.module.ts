@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: 'home', component: HeropageComponent },
   // { path: '**', component: NotFoundComponent },
   { path: '', redirectTo: '/navbar', pathMatch: 'full' },
- 
 ];
 
 @NgModule({

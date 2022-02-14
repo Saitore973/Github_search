@@ -1,3 +1,39 @@
+## Name of the project
+
+GitHubSearch
+
+## Author
+
+Saitore Virginia
+
+
+## Project Description
+
+This is a github search application where the user can input anyones Git hub username or repository and be able to view their profiles as well as their repos.
+
+
+## Technologies Used
+* TypeScript
+*Angular cli
+* HTML
+* CSS
+* Javascript
+* Bootstrap
+
+
+## LiveLink
+
+
+## Known Bugs 
+
+There are no known bugs at the moment but if any spotted you can reach reach me on saitorev@gmail.com
+## Setup and installation requirements
+
+* Go to the repo at https://github.com/Saitore973/Github_search.git;
+* Clone the repo;
+* cd to the project then go live.
+
+
 # GitHubSearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
@@ -25,3 +61,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Licence
+
+[MIT License](./LICENSE)
+
+Copyright (c) 2021 
+
+
