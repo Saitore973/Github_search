@@ -30,7 +30,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <img [src]="user.avatar" alt="" />
+          <img class="img-fluid"  [src]="user.avatar" alt="" />
           <div class="row">
             <div class="col-md-3">Repositories {{ user.public_repos }}</div>
             <div class="col-md-2">Followers {{ user.followers }}</div>
@@ -41,7 +41,7 @@
             routerLink="/about"
             routerLinkActive="active"
           >
-            <button>View Repository Details</button></a
+            <button class="btn ">View Repository Details</button></a
           >
         </div>
         <div class="col">
